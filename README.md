@@ -39,3 +39,15 @@
 	ссылка на последний коммит. В рабочей директории проэкта файл содержит \
 ссылку на другой файл .git/HEAD. А тот файл ссыдкается на на .git/refs/heads/main(в щависемости от названия ветки).\
  файл main содержит хеш последнего коммита.  
+
+
+```mermaid
+   flowchart TD;
+	A(untracked) -->|git add| B(staged)
+	B(staged) -->|git commit| C(tracked/commited)
+	B(staged) --> D(modified)
+	D(modified) -->|git add| B(staged)
+	C(tracked/commited) --> D(modified)
+```
+
+	
